@@ -3,9 +3,12 @@ package com.poo.rh.classes;
 import com.poo.rh.enums.Turno;
 
 public class Atendente extends Funcionario {
+
+    double sal = calcularSalarioLiquido();
+
     public Atendente(String nome, String cpf, String telefone, String endereco, String ctps, double salarioBruto,
-            Turno turno, double salarioLiquidoMensal, double salarioLiquidoDecimo, String atndimento) {
-        super(nome, cpf, telefone, endereco, ctps, salarioBruto, turno, salarioLiquidoMensal, salarioLiquidoDecimo);
+            Turno turno) {           
+        super(nome, cpf, telefone, endereco, ctps, salarioBruto, turno, sal, salarioLiquidoDecimo);
         
     }
 
@@ -34,8 +37,10 @@ public class Atendente extends Funcionario {
     }
 
     @Override
-    public void calcularSalarioLiquido() {
-        setSalarioLiquidoMensal(getSalarioBruto()-calcularFgts()-calcularInss());
+    public double calcularSalarioLiquido() {
+
+        double res = getSalarioBruto()-calcularFgts()-calcularInss();
+        return res;
        
     }
 

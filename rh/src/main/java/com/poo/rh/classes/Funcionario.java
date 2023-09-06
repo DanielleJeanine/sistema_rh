@@ -9,6 +9,7 @@ public abstract class Funcionario extends Pessoa implements CalcularTributos {
     private Turno turno;
     private double salarioLiquidoMensal;
     private double salarioLiquidoDecimo;
+
     public Funcionario(String nome, String cpf, String telefone, String endereco, String ctps, double salarioBruto,
             Turno turno, double salarioLiquidoMensal, double salarioLiquidoDecimo) {
         super(nome, cpf, telefone, endereco);
@@ -18,6 +19,7 @@ public abstract class Funcionario extends Pessoa implements CalcularTributos {
         this.salarioLiquidoMensal = salarioLiquidoMensal;
         this.salarioLiquidoDecimo = salarioLiquidoDecimo;
     }
+    
     public String getCtps() {
         return ctps;
     }

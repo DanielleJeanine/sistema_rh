@@ -11,20 +11,26 @@ public class Gerente extends Funcionario {
 
     @Override
     public double calcularFgts() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'calcularFgts'");
+       final double taxaFgts = 0.10;
+       double valorFgts = getSalarioBruto()*taxaFgts;
+      
+       return valorFgts;
     }
 
     @Override
     public double calcularInss() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'calcularInss'");
+        final double taxaInss = 0.12;
+       double valorInss = getSalarioBruto()*taxaInss;
+      
+       return valorInss;
     }
 
     @Override
     public double calcularDecimoTerceiro() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'calcularDecimoTerceiro'");
+        final double taxaDecimo = 0.20;
+       double valorDecimo = getSalarioBruto()*taxaDecimo;
+      
+       return valorDecimo;
     }
 
     @Override

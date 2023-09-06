@@ -4,6 +4,6 @@ public interface CalcularTributos {
     double calcularFgts();
     double calcularInss();
     double calcularDecimoTerceiro();
-    void calcularSalarioLiquido();
+    double calcularSalarioLiquido();
     void calcularSalarioDecimoTerceiro();
 }
