@@ -3,12 +3,10 @@ package com.poo.rh.classes;
 import com.poo.rh.enums.Turno;
 
 public class Atendente extends Funcionario {
-    private String Atndimento;
-
     public Atendente(String nome, String cpf, String telefone, String endereco, String ctps, double salarioBruto,
             Turno turno, double salarioLiquidoMensal, double salarioLiquidoDecimo, String atndimento) {
         super(nome, cpf, telefone, endereco, ctps, salarioBruto, turno, salarioLiquidoMensal, salarioLiquidoDecimo);
-        Atndimento = atndimento;
+        
     }
 
     @Override

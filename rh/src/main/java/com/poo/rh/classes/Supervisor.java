@@ -19,5 +19,35 @@ public class Supervisor extends Funcionario {
         this.supervisionar = supervisionar;
     }
 
+    @Override
+    public double calcularFgts() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'calcularFgts'");
+    }
+
+    @Override
+    public double calcularInss() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'calcularInss'");
+    }
+
+    @Override
+    public double calcularDecimoTerceiro() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'calcularDecimoTerceiro'");
+    }
+
+    @Override
+    public void calcularSalarioLiquido() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'calcularSalarioLiquido'");
+    }
+
+    @Override
+    public void calcularSalarioDecimoTerceiro() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'calcularSalarioDecimoTerceiro'");
+    }
+
         
 }
