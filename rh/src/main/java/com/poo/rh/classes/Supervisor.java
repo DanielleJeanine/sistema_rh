@@ -3,20 +3,11 @@ package com.poo.rh.classes;
 import com.poo.rh.enums.Turno;
 
 public class Supervisor extends Funcionario {
-    private String supervisionar;
 
     public Supervisor(String nome, String cpf, String telefone, String endereco, String ctps, double salarioBruto,
-            Turno turno, double salarioLiquidoMensal, double salarioLiquidoDecimo, String supervisionar) {
+            Turno turno, double salarioLiquidoMensal, double salarioLiquidoDecimo) {
         super(nome, cpf, telefone, endereco, ctps, salarioBruto, turno, salarioLiquidoMensal, salarioLiquidoDecimo);
-        this.supervisionar = supervisionar;
-    }
-
-    public String getSupervisionar() {
-        return supervisionar;
-    }
-
-    public void setSupervisionar(String supervisionar) {
-        this.supervisionar = supervisionar;
+        //TODO Auto-generated constructor stub
     }
 
     @Override
@@ -44,15 +35,19 @@ public class Supervisor extends Funcionario {
     }
 
     @Override
-    public void calcularSalarioLiquido() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'calcularSalarioLiquido'");
+    public double calcularSalarioLiquido() {
+
+        double salarioLiquidoMensal = getSalarioBruto()-calcularFgts()-calcularInss();
+        return salarioLiquidoMensal ;
+       
     }
 
     @Override
-    public void calcularSalarioDecimoTerceiro() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'calcularSalarioDecimoTerceiro'");
+    public double calcularSalarioDecimoTerceiro() {
+
+       double salarioLiquidoDecimo = getSalarioBruto() - calcularFgts() - calcularInss() + calcularDecimoTerceiro();
+       return salarioLiquidoDecimo;
+        
     }
 
         

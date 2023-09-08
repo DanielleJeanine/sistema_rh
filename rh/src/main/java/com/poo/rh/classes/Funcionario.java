@@ -16,8 +16,8 @@ public abstract class Funcionario extends Pessoa implements CalcularTributos {
         this.ctps = ctps;
         this.salarioBruto = salarioBruto;
         this.turno = turno;
-        this.salarioLiquidoMensal = salarioLiquidoMensal;
-        this.salarioLiquidoDecimo = salarioLiquidoDecimo;
+        this.salarioLiquidoMensal = calcularSalarioLiquido();
+        this.salarioLiquidoDecimo = calcularSalarioDecimoTerceiro();;
     }
     
     public String getCtps() {
